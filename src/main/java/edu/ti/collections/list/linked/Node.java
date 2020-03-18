@@ -1,8 +1,8 @@
 package edu.ti.collections.list.linked;
 
-public class ListNode {
+public class Node {
     Object payload;
-    ListNode next;
+    Node next;
 
     public Object getPayload() {
         return payload;
@@ -12,11 +12,11 @@ public class ListNode {
         this.payload = payload;
     }
 
-    public ListNode getNext() {
+    public Node getNext() {
         return next;
     }
 
-    public void setNext(ListNode next) {
+    public void setNext(Node next) {
         this.next = next;
     }
 }

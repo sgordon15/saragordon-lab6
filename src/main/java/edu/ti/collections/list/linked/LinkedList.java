@@ -1,7 +1,7 @@
 package edu.ti.collections.list.linked;
 
 public class LinkedList {
-    private class Node {
+    private class Node {   //nested class allows you to ?
         Object payload;
         Node next = null;
 
@@ -42,7 +42,11 @@ public class LinkedList {
 
     //TODO -- implement private helper method end that returns last Node in list
     private Node end() {
-        return null;
+        Node endNode = head;
+        while (endNode.getNext() != null) {
+            endNode = endNode.getNext();
+        }
+        return endNode;
     }
 
     //TODO -- implement size to return number of Nodes in list
@@ -51,8 +55,11 @@ public class LinkedList {
     }
 
     //TODO -- implement insert, which inserts Node for object as new head of list
+    //done in class
     public void insert(Object object) {
-        //code needed here
+        Node newNode = new Node(object);
+        newNode.setNext(head);
+        head = newNode;
     }
 
     //TODO -- implement append, that appends Node to end of list

@@ -1,7 +1,5 @@
 package edu.ti.collections.list.linked;
 
-
-
 public class LinkedList {
     private java.lang.Object Object;
 
@@ -81,14 +79,10 @@ public class LinkedList {
         if (isEmpty()) {
             head = new_node;
         } else {
-            // Else traverse till the last node and insert the new_node there
-//            Node last = head;
-//            while (last.next != null) {
-//                last = last.next;
-//            }
+            // traverse till the last node and insert the new_node there
             // Insert the new_node at last node
-            Node last = endNode();
-            last.next = new_node;
+            Node previous = endNode();
+            previous.next = new_node;
         }
     }
 

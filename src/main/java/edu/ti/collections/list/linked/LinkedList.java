@@ -60,7 +60,7 @@ public class LinkedList {
             size++;
             currentNode = currentNode.getNext();
         }
-        size += 1; //add 1 to include the last node
+        size += 1; //add 1 to include the last node in the size
         return size;
     }
 

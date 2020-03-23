@@ -55,10 +55,12 @@ public class LinkedList {
     //TODO -- implement size to return number of Nodes in list
     public int size() {
         int size = 0;
-        Node currentNode = head;
-        while (currentNode.getNext() != null) {
-            size++;
-            currentNode = currentNode.getNext();
+        if (!isEmpty()) {
+            Node currentNode = head;
+            while (currentNode.getNext() != null) {
+                size++;
+                currentNode = currentNode.getNext();
+            }
         }
         size += 1; //add 1 to include the last node in the size
         return size;
